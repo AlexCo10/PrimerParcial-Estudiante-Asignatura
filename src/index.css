@@ -1,0 +1,215 @@
+
+/* Add these rules to your existing CSS */
+
+:root {
+  --primary-red: #e53e3e;
+  --light-red: #fed7d7;
+  --dark-red: #c53030;
+  --accent-red: #f56565;
+}
+
+.credit-counter {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: #fff0f0;
+  border: 1px solid var(--light-red);
+  border-radius: 4px;
+  color: #333;
+}
+
+.credit-counter .exceeded {
+  color: var(--primary-red);
+  font-weight: bold;
+}
+
+.credit-info {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #fff5f5;
+  border-radius: 4px;
+  border-left: 3px solid var(--primary-red);
+}
+
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #fff5f5;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+.student-info p {
+  margin: 5px 0;
+}
+
+/* Make disabled options visually distinct */
+select option:disabled {
+  color: #999;
+  font-style: italic;
+}
+
+/* Header styles */
+.header {
+  background-color: var(--dark-red);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--dark-red);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+}
+
+.btn-secondary:hover {
+  background-color: #fff0f0;
+}
+
+/* List items */
+.list-item {
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.list-item-info h3 {
+  color: var(--dark-red);
+  margin-top: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  color: var(--dark-red);
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 600px;
+  border-top: 4px solid var(--primary-red);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fecaca;
+  padding-bottom: 10px;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark-red);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--dark-red);
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast.success {
+  background-color: #38a169;
+}
+
+.toast.error {
+  background-color: var(--primary-red);
+}
